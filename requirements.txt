@@ -11,5 +11,6 @@ pluggy==1.6.0
 Pygments==2.19.2
 pytest==9.0.1
 requests==2.32.5
+requests-mock==1.12.1
 rich==14.2.0
 urllib3==2.5.0
