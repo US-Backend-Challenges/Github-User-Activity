@@ -1,6 +1,7 @@
 # Github User Activity: CLI App
 
 <a href="https://roadmap.sh/projects/github-user-activity">**Github User Activity**</a> is a project used to fetch the recent activity of a GitHub user and display it in the terminal.
+
 ---
 
 ## ✨ Usage
