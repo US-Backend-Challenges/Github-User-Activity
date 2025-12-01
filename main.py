@@ -55,12 +55,12 @@ actions = {
 }
 
 @click.group()
-def cli():
+def cli() -> None:
     pass
 
 @click.command("github-activity")
 @click.argument("username")
-def github_activity(username):
+def github_activity(username: str) -> None:
     api = f"https://api.github.com/users/{username}/events"
     repositories = {}
 
