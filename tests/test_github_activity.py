@@ -19,3 +19,10 @@ def test_github_activity():
     # assert "6323174530" in result.output
     # assert "PushEvent" in result.output
     assert "kamranahmedse/reminder" in result.output
+
+def test_github_activity_error():
+    runner = CliRunner()
+
+    result = runner.invoke(cli, ["github-activity", "nonexistinguser"])
+
+    assert "Connection error" in result.output or "Unexpected error" in result.output
