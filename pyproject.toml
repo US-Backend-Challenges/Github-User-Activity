@@ -1,0 +1,27 @@
+[project]
+name = "github-user-activity"
+version = "0.0.1"
+description = "Fetch the recent activity of a GitHub user and display it in the terminal"
+requires-python = ">=3.8"
+readme = "README.md"
+dependencies = [
+    "click",
+    "requests",
+    "rich"
+]
+
+[project.optional-dependencies]
+test = ["pytest", "requests_mock"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["main", "gui"]
+
+[tool.setuptools.packages.find]
+exclude = ["tests*"]
+
+[project.scripts]
+gua = "main:cli"
