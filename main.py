@@ -69,6 +69,11 @@ def github_activity(username: str) -> None:
 
         events = response.json()
 
+        if isinstance(events, dict) and events["message"] is not None:
+            rich_error(events["message"])
+            
+            return
+
         for event in events:
             repository = event["repo"]["name"]
             
